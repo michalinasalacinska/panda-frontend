@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Panda task 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <meta name="robots" content="index, follow" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="menu-main" id="menu">
+        <button class="burger" id="show-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul>
+          <li class="menu-item">
+            <a href="#">Menu item 1</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Menu item 2</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Menu item 3</a>
+          </li>
+          <li class="menu-item btn-wrapper">
+            <a href="#" class="btn">Menu special</a>
+          </li>
+        </ul>
+      </nav>
+      <div id="header-container" class="container-inner">
+        <h1 class="lorem-h"></h1>
+        <div class="lorem-container"></div>
+      </div>
+    </header>
+    <main>
+      <div class="bar-fullwidth bar-images">
+        <img
+          class="grass"
+          srcset="
+            images/grass-320w.jpg   320w,
+            images/grass-500w.jpg   500w,
+            images/grass-800w.jpg   800w,
+            images/grass-1400w.jpg 1400w
+          "
+          sizes="
+            (max-width: 320px) 310px,
+            (max-width: 500px) 490px, 
+            (max-width: 800px) 790px, 
+            1400px
+          "
+          src="images/grass-1400w.jpg"
+          alt="Grass background"
+        />
+        <div class="lorem-aside container-inner"></div>
+      </div>
+      <section class="section-first">
+        <aside>
+          <div class="lorem-aside container-aside"></div>
+          <div class="lorem-aside container-aside"></div>
+          <div class="lorem-aside container-aside"></div>
+        </aside>
+        <article>
+          <h2 class="lorem-h"></h2>
+          <div class="lorem-article"></div>
+        </article>
+      </section>
+      <div class="bar-fullwidth bar-second">
+        <div class="lorem-container container-inner"></div>
+      </div>
+      <section class="section-second">
+        <article class="lorem-article"></article>
+      </section>
+      <div class="bar-fullwidth bar-third">
+        <div class="lorem-container container-inner"></div>
+      </div>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li class="menu-item">
+            <a href="#">Footer item 1</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Footer item 2</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Footer item 3</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="info-container lorem-container"></div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

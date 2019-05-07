@@ -1,0 +1,82 @@
+article {
+    @extend %box;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.section-first {
+  display: flex;
+  flex-wrap: wrap;
+
+  div.container-aside {
+    @extend %box;
+    width: 100%;
+    margin-right: 24px;
+    padding: 24px;
+    background-color: map-get($green, medium);
+    font-size: 1.4rem;
+
+    p {
+        color: #ffffff;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 24px;
+    }
+
+    @include MQ(Lneg) {
+      &:first-of-type,
+      &:nth-of-type(2) {
+        width: calc(50% - 12px);
+      }
+
+      &:first-of-type {
+        margin-right: 12px;
+      }
+
+      &:nth-of-type(2) {
+        margin-right: 0;
+        margin-left: 12px;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    @include MQ(Sneg) {
+      &:first-of-type,
+      &:nth-of-type(2) {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+
+  aside {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 25%;
+
+    @include MQ(Lneg) {
+      order: 2;
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+
+  article {
+    width: 75%;
+
+    @include MQ(Lneg) {
+      order: 1;
+      width: 100%;
+    }
+  }
+}
+
+.section-second {
+  display: flex;
+}

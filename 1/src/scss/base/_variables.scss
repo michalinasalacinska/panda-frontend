@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin-ext');
+
+$basic: (
+  basic: #3e3e3e,
+  bg: #f6f3f7,
+  shadow: #c4c2c5
+);
+
+$green: (
+  medium: #11998e,
+  lime: #38ef7d
+);
+
+$pink: (
+  light: #ff0883,
+  medium: #e00070,
+  darker: #b8005c
+);
+
+// I'm not so good at guessing font based only on images, so I used my one of fav:
+$fontMain: 'Roboto', sans-serif;
+
+// breakpoints
+$S: 500px;
+$M: 600px;
+$L: 800px;
+
+//min and max page width
+$min-width: 320px;
+$max-width: 1400px;

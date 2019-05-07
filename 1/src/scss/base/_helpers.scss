@@ -1,0 +1,50 @@
+@import './variables';
+
+@mixin MQ($canvas) {
+  @if $canvas==Sneg {
+    @media only screen and (max-width: $S) {
+      @content;
+    }
+  } @else if $canvas==Lneg {
+    @media only screen and (max-width: $L) {
+      @content;
+    }
+  } @else if $canvas==Mneg {
+    @media only screen and (max-width: $M) {
+      @content;
+    }
+  } @else if $canvas==MAXneg {
+    @media only screen and (max-width: $max-width) {
+      @content;
+    }
+  }
+}
+
+%gradientBorder {
+  position: relative;
+  background-clip: padding-box;
+  border: solid 2px transparent;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background-image: linear-gradient(
+      to right,
+      map-get($green, medium),
+      map-get($green, lime)
+    );
+  }
+}
+
+%box {
+  border-radius: 6px;
+  box-shadow: 0 8px 20px 0 map-get($basic, shadow);
+}

@@ -1,0 +1,8 @@
+# dependencies
+/1/node_modules
+
+# compiled output
+/1/dist
+
+# IDE
+.vscode/*

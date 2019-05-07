@@ -1,0 +1,34 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      button {
+        display: block;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="getCat">Just one more cat!</button>
+    <img id="catImg">
+    <!--<script src="https://code.jquery.com/jquery-2.2.0.min.js" ></script>-->
+    <script>
+      const apiKey = 'xxx'; // put here your API key for giphy
+      const url = 'http://api.giphy.com/v1/gifs/search?q=cat&api_key=' + apiKey + '&limit=1&offset=';
+      let count = 0;
+
+      document.getElementById('getCat').addEventListener('click', () => {
+        count += 1;
+        fetch(url + count)
+          .then(res => {
+            return res.json();
+          })
+          .then(data => {
+            document.getElementById('catImg').setAttribute('src', data.data[0].images.downsized.url);
+          });
+      });
+    </script>
+  </body>
+</html>

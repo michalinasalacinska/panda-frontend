@@ -1,0 +1,11 @@
+header {
+  .container-inner {
+    @extend %box;
+    background-color: #ffffff;
+    font-size: 2rem;
+
+    @include MQ(Sneg) {
+      font-size: 1.8rem;
+    }
+  }
+}
